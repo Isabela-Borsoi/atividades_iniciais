@@ -1,0 +1,9 @@
+/* Estilo para a div com a imagem de fundo */
+.background-image {
+    width: 300px; /* Define a largura da div */
+    height: 300px; /* Define a altura da div */
+    background-image: url('imagem-livro.jpg'); /* Adiciona a imagem de fundo */
+    background-size: cover; /* Faz com que a imagem cubra toda a área da div */
+    background-position: center; /* Centraliza a imagem na div */
+    background-repeat: no-repeat; /* Impede a repetição da imagem */
+}
