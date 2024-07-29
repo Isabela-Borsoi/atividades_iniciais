@@ -1,0 +1,14 @@
+/* Estilo para o container principal */
+.container {
+    display: grid; /* Define o container como um grid container */
+    grid-template-columns: repeat(3, 1fr); /* Cria um layout de grade com três colunas */
+    grid-template-rows: repeat(2, auto); /* Define duas linhas com altura automática */
+    gap: 10px; /* Define a lacuna de 10px entre as divs */
+}
+
+/* Estilo para as divs dentro do container */
+.container > div {
+    border: 1px solid #000000; /* Adiciona uma borda preta de 1px */
+    padding: 20px; /* Define o padding interno de 20px */
+    text-align: center; /* Alinha o texto ao centro */
+}
