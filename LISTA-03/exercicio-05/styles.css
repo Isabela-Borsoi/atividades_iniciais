@@ -1,0 +1,13 @@
+/* Estilo para o container principal */
+.container {
+    display: flex; /* Define o container como um flex container */
+}
+
+/* Estilo para as divs dentro do container */
+.container > div {
+    flex: 1; /* Faz com que as divs dentro do container se distribuam em linha */
+    border: 1px solid #000000; /* Adiciona uma borda preta de 1px */
+    padding: 20px; /* Define o padding interno de 20px */
+    text-align: center; /* Alinha o texto ao centro */
+    box-sizing: border-box; /* Inclui a borda e o padding no cálculo da largura */
+}
