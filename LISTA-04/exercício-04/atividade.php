@@ -6,4 +6,4 @@ class MinhaClasse {
 }
 
 $MinhaClasse = new MinhaClasse();
-echo ("O maior valor é {$minhaclasse->buscaMaiorValor($_GET['a'], $_GET['b'], $_GET['c'])}");
+echo ("O maior valor é {$MinhaClasse->buscaMaiorValor($_GET['a'], $_GET['b'], $_GET['c'])}");
