@@ -13,10 +13,13 @@ class aluno {
 
     function getAll() {
         $sql = "SELECT 
+            nome,
             id, 
             ID_pessoa, 
-            DATE_FORMAT(data_cadastro, '%d/%m/%Y %H:%i:%s') data_cadastro
-        FROM aluno";
+            DATE_FORMAT(a.data_cadastro, '%d/%m/%Y %H:%i:%s') data_cadastro
+        FROM aluno a
+        inner join pessoa p on (a.id_pessoa = p.codigo)";
+
         $result = $this->conn->query($sql);
 
         $data = [];
@@ -130,7 +133,7 @@ if (!in_array($_SERVER['REQUEST_METHOD'], $allowed_methods)) {
     ] );
 }
 
-$pessoa = new Pessoa($conn);
+$pessoa = new aluno($conn);
 
 if ($_SERVER['REQUEST_METHOD'] == 'DELETE') {
     echo json_encode($pessoa->deleteById($_GET['id']));
