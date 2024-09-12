@@ -13,13 +13,17 @@ class vinculo_aluno_e_curso {
 
     function getAll() {
         $sql = "SELECT 
-            data_fim,
-            data_inicio,
-            id,
+            p.nome,
+            ac.data_fim,
+            ac.data_inicio,
+            ac.id,
             id_aluno,
             id_curso,
-            DATE_FORMAT(data_cadastro, '%d/%m/%Y %H:%i:%s') data_cadastro
-        FROM vinculo_aluno_e_curso";
+            DATE_FORMAT(ac.data_cadastro, '%d/%m/%Y %H:%i:%s') data_cadastro
+        FROM vinculo_aluno_e_curso ac
+        inner join aluno a on (ac.id_aluno = a.id)
+        inner join pessoa p on (a.id_pessoa = p.codigo)
+        inner join curso c on (ac.id_curso = c.id )";
         $result = $this->conn->query($sql);
 
         $data = [];
